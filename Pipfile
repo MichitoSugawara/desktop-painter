@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl=true
+name = "pypi"
+
+[packages]
+pyqt5 = "*"
+keyboard = "*"
+
+[dev-packages]
+pyinstaller = "*"
+python-dotenv = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+dev = "pipenv run python main.py"
+build = "pipenv run pyinstaller --noconsole --icon favicon.ico --name desktoppainter --onefile main.py"
